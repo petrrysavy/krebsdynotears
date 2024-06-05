@@ -1,7 +1,8 @@
 from dynotearstrain import train
+import os
 
-with open("series.txt", "r") as file:
+with open("krebsN.txt", "r") as file:
     lines = file.readlines()
-files = [line.strip() for line in lines]
+files = ["krebsN" + os.sep + line.strip() for line in lines]
 
 train(files, "series_graph.txt", "results.txt")
